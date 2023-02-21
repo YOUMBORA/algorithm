@@ -4,6 +4,6 @@ def solution(clothes):
     keys = [i[1] for i in clothes]
     sol = Counter(keys)
     ans = 1
-    for i in sol:
-        ans *= (1+sol[i])
+    for i,v in sol.items():
+        ans *= (1+v)
     return ans-1
