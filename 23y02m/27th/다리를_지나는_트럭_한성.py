@@ -29,7 +29,7 @@ def solution(bridge_length, weight, truck_weights):
         answer += bridge_length + waiting
         print('answer',answer)
     return answer
-
+# waiting time 에 대한 정의가 필요한듯 하나 어떻게 정의해야할 지 모르겠음.
 if __name__== '__main__':
     bridge_length = 2
     weight = 10
