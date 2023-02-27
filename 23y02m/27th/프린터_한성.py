@@ -10,7 +10,7 @@ def solution(priorities, location):
     while True:
         tmp = arr.pop(0)
         print(tmp)
-        if max([i for _,i in arr]) > tmp[1]:
+        if any(tmp[1] < i for _,i in arr):
             arr.append(tmp)
             print('prio : ',arr)
         else:
