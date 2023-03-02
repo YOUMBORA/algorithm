@@ -13,4 +13,4 @@ def solution(word):
     # 모음사전은 정렬 오름차순 순서로 되어 있음
     word_list.sort()
     
-    return word_list.index(word) + 1
+    return word_list.index(word) + 1 
