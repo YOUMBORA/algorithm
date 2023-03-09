@@ -40,7 +40,6 @@ def solution():
     graph = []
     for i in range(edges):
         graph.append(list(map(int, input().split())))
-    print(graph)
     adj_dict = defaultdict(list)
     
     for edge in graph:
