@@ -27,7 +27,7 @@ def dfs(x, y):
         ny = y + dy[i]
 
         # graph 안에 있으며 울타리 안쪽으로만 돌면서 살펴보기
-        if (0 <= nx < c) and (0 <= ny < r):
+        if (0 <= nx < r) and (0 <= ny < c):
             if graph[nx][ny] != '#':
                 dfs(nx, ny)
 
