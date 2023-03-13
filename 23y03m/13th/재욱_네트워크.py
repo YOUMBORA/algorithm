@@ -11,11 +11,6 @@ def bfs(graph, x, visit):
             if not visit[i]:
                 queue.append(i)
                 visit[i] = True
-        
-    
-    
-    
-    return
 
 
 def solution(n, computers):
