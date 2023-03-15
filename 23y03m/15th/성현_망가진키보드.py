@@ -13,7 +13,7 @@ while True:
             end = mid -1
         else:
             if sett >= value:
-                value = len(list(s[start:mid]))
+                value = max(len(list(s[start:mid])),value)
             start = mid +1
     print(value)
 
