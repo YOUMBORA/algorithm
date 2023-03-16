@@ -3,6 +3,7 @@ def solution(distance, rocks, n):
     start = 0
     end = distance
     while(start <= end):
+        # mid가 거리의 최솟값
         mid = (start+end)//2
         p_stone = 0
         no = 0
