@@ -1,21 +1,26 @@
 while True:
-    m = int(input())
-    if m == 0:
+    usable_k = int(input())
+    if usable_k == 0:
         break
-    s = input()
-    value = 0
-    for i in range(len(s)):
-        start = i
-        end = len(s)-1
-        mid = (start+end)//2
-        sett = len(set(list(s[start:mid])))
-        if  sett> m:
-            end = mid -1
+    sentence = input()
+    ascii_k = [0] * 128
+    max_length = 0
+
+    l, r = -1, -1
+    using_k = 0 
+    while l <= r:
+        if usable_k > using_k or (using_k == usable_k and ascii_k[ord(sentence[r+1])]>0):
+            r +=1
+            if ascii_k[ord(sentence[r])] ==  0:
+                using_k += 1
+            ascii_k[ord(sentence[r])] += 1
         else:
-            if sett >= value:
-                value = max(len(list(s[start:mid])),value)
-            start = mid +1
-    print(value)
-
-    
-
+            l +=1
+            ascii_k[ord(sentence[l])] -= 1
+            if ascii_k[ord(sentence[l])] == 0:
+                using_k -= 1
+        max_length = max(r - l, max_length)
+        if r == len(sentence) -1:
+            print(l,r)
+            break 
+    print('aa')

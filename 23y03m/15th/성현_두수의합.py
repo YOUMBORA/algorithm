@@ -6,6 +6,7 @@ def binary(m,sa,ka):
         end = n-1
         while start<=end:
             mid = (start+end)//2
+            print(start, mid, end)
             avg = sa[i] + sa[mid]
             if avg > ka:
                 end = mid -1
