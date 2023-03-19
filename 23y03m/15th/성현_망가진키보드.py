@@ -21,6 +21,5 @@ while True:
                 using_k -= 1
         max_length = max(r - l, max_length)
         if r == len(sentence) -1:
-            print(l,r)
+            print(max_length)
             break 
-    print('aa')
