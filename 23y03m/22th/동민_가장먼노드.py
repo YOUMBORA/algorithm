@@ -2,7 +2,6 @@ import heapq
 
 def dijkstra(adj_list, start, n):
     INF = 1e9
-    visited = [False] * n
     dist = [INF] * n
     
     heap_list = []
@@ -10,9 +9,8 @@ def dijkstra(adj_list, start, n):
     
     dist[0] = 0
     
-    for _ in range(n-1):
+    while heap_list:
         cur_dist, cur_node = heapq.heappop(heap_list)
-        visited.append(cur_node)
 
         for id in adj_list[cur_node]:
             if (dist[id] > 1 + cur_dist):
