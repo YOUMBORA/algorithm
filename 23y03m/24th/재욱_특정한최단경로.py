@@ -34,4 +34,4 @@ v2_ = dijkstra(v2)
 
 cnt = min(one[v1] + v1_[v2] + v2_[n], one[v2] + v2_[v1] + v1_[n])
 
-print(cnt if cnt < inf else -1)ㅌ
+print(cnt if cnt < inf else -1)
