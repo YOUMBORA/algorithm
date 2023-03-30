@@ -13,6 +13,7 @@ dp = [[0 for j in i] for i in triangle]
 # dp 테이블에 두 번째 줄까지 입력해주기
 dp[0][0] = triangle[0][0]
 
+# n이 2일때부터!! 조건 주의하기
 if n > 1:
     dp[1][0] = triangle[1][0] + dp[0][0]
     dp[1][1] = triangle[1][1] + dp[0][0]
