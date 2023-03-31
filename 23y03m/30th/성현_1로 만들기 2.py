@@ -16,5 +16,6 @@ for i in range(2, N+1):
         result[i][0] = result[i//2][0] + 1
         result[i][1] = result[i//2][1] + [i]
         
+print(result[N][0])
 for i in result[N][1][::-1]:
     print(i, end=' ')
