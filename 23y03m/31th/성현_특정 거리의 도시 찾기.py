@@ -12,6 +12,7 @@ def dijkstra(start):
     dist = [INF]*(N+1)
     q = []
     hq.heappush(q,(0,start))
+    dist[start]=0
     while q:
         cost, node = hq.heappop(q)
         if dist[node] < cost:
